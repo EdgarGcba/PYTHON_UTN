@@ -32,7 +32,7 @@ class PlazoFijo(Cuenta):
 
     def calcular_interes(self):
         interes_ganado = self.monto * (self.interes_anual / 100) * (self.plazo / 365)
-        return interes_ganado
+        return round(interes_ganado, 2)
 
     def acreditar_interes(self):
         interes_ganado = self.calcular_interes()
